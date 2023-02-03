@@ -1,0 +1,27 @@
+a {
+    @include typeFace-1(p2, desktop);
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+
+    color: $black-normal;
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.btn{
+    background: $gradient1;
+    border-radius: 1rem;
+    padding: 0.75rem 2rem;
+    transition: .3s ease-in-out;
+    color: $white-light;
+    box-shadow: 0px 4px 25px -10px rgba(0, 0, 0, 0.5);
+
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: 0px 4px 25px -10px rgba(252, 189, 56, 0.3);
+    }
+}

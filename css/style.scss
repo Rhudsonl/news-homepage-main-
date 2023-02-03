@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+   min-height: 100vh;
+    width: 100%;
+    font-size: .938rem;
+    font-family: 'Inter', sans-serif;
+}
+img,svg {
+    display: block;
+    width: 100%;
+}
+@import './partials/colors';
+@import './partials/menu';
+@import './partials/layout';
+@import './partials/spacing';
+
+.border {
+    border: 1px solid red;
+}

@@ -1,0 +1,148 @@
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    min-height: 100%;
+    background: transparent;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -3;
+    li {
+        margin: 16px;
+        transform: translate3d(0,-80px,0);
+    
+    }
+
+   
+}
+.active-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    min-height: 100%;
+    background: $white-normal;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 3;
+    li {
+        margin: 16px;
+        transform: translate3d(0,-80px,0);
+    
+    }
+
+}
+//navbar desktop 
+.nav-links-desktop {
+    display: none;
+}
+
+.logo-desktop{
+    display: none;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+   
+}
+
+a{
+    text-decoration: none;
+    color: $blue-normal;
+
+    &:hover {
+        color: $orange;
+    }
+}
+.logo-mobile, .logo-desktop{
+    width: 50px;
+}
+.bx {
+    background-image: url(/assets/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    cursor: pointer;
+    z-index: 3;
+
+    transition: .4s ease;
+
+}
+.active-bx {
+    background-image: url(/assets/images/icon-menu-close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 30px;
+    cursor: pointer;
+    
+    z-index: 3;
+
+    transition: .4s ease;
+}
+
+@media screen and (min-width: 500px) {
+    a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+   header {
+    max-width: 100%;
+   }
+   nav {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+
+   }
+
+   .logo-mobile {
+    display: none;
+   }
+   .logo-desktop {
+    display: block;
+    margin-left: -40px;
+   }
+
+
+   .nav-links-desktop {
+    display: flex;
+    li {
+        margin-left: 30px;
+    }
+   a {
+    font-size: 1rem;
+   }
+  
+   }
+    
+    .bx {
+        display: none;
+      
+    }
+    .nav-links {
+        display: none;
+    }
+
+    body {
+        padding-top: 1.5rem;
+    }
+}
